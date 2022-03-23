@@ -3,6 +3,7 @@ A small wrapper utility around dd to create bootable usb-s fast and easy - writt
 
 ## What it does
 - Looks through your home directory and lists your ISO files (newest first) to choose one
+- Downloads iso's from the internet if you have none available in your current directory
 - Lists your connected USB drives (by their brand and size for easy recognition) to choose one
 - Unmount your selected USB if it's mounted
 - Puts your selected ISO on it (with the *dd* utility)
