@@ -17,25 +17,25 @@ def main(argv):
         exit()
 
         if len(iso_list) is 0:
-        print("You don't have ISO files in this directory!")    
-        downloadIso = input("Would you like to automatically download any iso's? [y]es, [n]o ")
-        if downloadIso == 'y':
-            print("What would you like to install?")
-            print("[u]buntu 21.10")
-            print("[l]inux mint cinnamon 20.3")
-            print("[m]anjaro KDE 21.2.5")
-            print("[a]rchlinux 2022.03.01")
-            isoDownload = input("select iso(s) to install: ")
-            if 'u' in isoDownload:
-                os.system('wget https://releases.ubuntu.com/21.10/ubuntu-21.10-desktop-amd64.iso')
-            if 'l' in isoDownload:
-                os.system('wget https://mirrors.layeronline.com/linuxmint/stable/20.3/linuxmint-20.3-cinnamon-64bit.iso')
-            if 'm' in isoDownload:
-                os.system('wget https://download.manjaro.org/kde/21.2.5/manjaro-kde-21.2.5-220314-linux515.iso')
-            if 'a' in isoDownload:
-                os.system('wget https://mirror.rackspace.com/archlinux/iso/2022.03.01/archlinux-2022.03.01-x86_64.iso')
-        else:
-            exit()
+            print("You don't have ISO files in this directory!")    
+            downloadIso = input("Would you like to automatically download any iso's? [y]es, [n]o ")
+            if downloadIso == 'y':
+                print("What would you like to install?")
+                print("[u]buntu 21.10")
+                print("[l]inux mint cinnamon 20.3")
+                print("[m]anjaro KDE 21.2.5")
+                print("[a]rchlinux 2022.03.01")
+                isoDownload = input("select iso(s) to install: ")
+                if 'u' in isoDownload:
+                    os.system('wget https://releases.ubuntu.com/21.10/ubuntu-21.10-desktop-amd64.iso')
+                if 'l' in isoDownload:
+                    os.system('wget https://mirrors.layeronline.com/linuxmint/stable/20.3/linuxmint-20.3-cinnamon-64bit.iso')
+                if 'm' in isoDownload:
+                    os.system('wget https://download.manjaro.org/kde/21.2.5/manjaro-kde-21.2.5-220314-linux515.iso')
+                if 'a' in isoDownload:
+                    os.system('wget https://mirror.rackspace.com/archlinux/iso/2022.03.01/archlinux-2022.03.01-x86_64.iso')
+            else:
+                exit()
 
     # sorting, listing, selecting
     iso_list.sort(key=os.path.getmtime, reverse=True)
